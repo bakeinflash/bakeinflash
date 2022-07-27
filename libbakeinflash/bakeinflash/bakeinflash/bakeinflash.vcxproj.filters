@@ -1,0 +1,1300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="res">
+      <UniqueIdentifier>88603536-cb87-4abc-8636-00cb32cdde95</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res\values">
+      <UniqueIdentifier>84e5ed35-5280-4e8a-a78b-349762e7c872</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{0c13d12e-fd11-40f6-8e48-c2600c5aff52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\com">
+      <UniqueIdentifier>{86c63095-7c80-4e63-bf7a-0bea9000d2a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jni">
+      <UniqueIdentifier>{2aa4e208-b47e-43da-9f66-3215b534f397}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jni\bakeinflash">
+      <UniqueIdentifier>{aca9fc2c-32e6-4d9b-9c0a-5fd1541168ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jni\base">
+      <UniqueIdentifier>{434309f2-03f7-48e8-8ee2-9d9f86150fb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jni\bakeinflash\as_classes">
+      <UniqueIdentifier>{418b4de9-e34b-44db-b370-7e78cb33f7ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jni\jpeg">
+      <UniqueIdentifier>{0c521ff6-7787-4785-ade3-403bb3b3a025}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jni\openAL">
+      <UniqueIdentifier>{8f2835e3-b1b7-4f24-8bde-49c4ca7cd815}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jni\puggi">
+      <UniqueIdentifier>{160cafe6-ad49-4684-a05d-e2be3f165f15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jni\freetype">
+      <UniqueIdentifier>{7c393806-eb5b-426f-8f00-dbafb50d7f40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res\layout">
+      <UniqueIdentifier>{a113c0df-20e1-402a-8232-17bf07a66c5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res\drawable">
+      <UniqueIdentifier>{983570c8-d05d-4d7e-b142-f861602c0d5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jni\zlib">
+      <UniqueIdentifier>{4248a081-68bd-4239-9d99-1e1b72dfa51a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jni\plugins">
+      <UniqueIdentifier>{0d953bd8-08ed-41d3-a4c6-6fe7601e395e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib3ds">
+      <UniqueIdentifier>{bac09bcc-baae-49b0-919e-54f3ae7f25d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs">
+      <UniqueIdentifier>{66698df4-3d38-44c1-b5fc-2ee531f84c51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jni\piff">
+      <UniqueIdentifier>{b1b4d98f-1376-413f-865f-32889c39ac27}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidBuild Include="AndroidManifest.xml" />
+    <AndroidBuild Include="build.xml" />
+    <AndroidBuild Include="project.properties" />
+    <AndroidBuild Include="proguard.cfg" />
+    <AndroidBuild Include="res\values\strings.xml">
+      <Filter>res\values</Filter>
+    </AndroidBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="jni\main.cpp">
+      <Filter>jni</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_abc.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_action.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_sprite.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_avm2.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_avm2_jit.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_button.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_canvas.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_character.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_disasm.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_dlist.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_environment.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_filters.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_font.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_fontlib.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_freetype.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_function.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_impl.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_json.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_listener.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_log.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_md5.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_morph2.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_movie_def.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_mutex.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_object.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_player.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_render.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_render_handler_ogles.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_root.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_shape.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_sound.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_sound_handler_openal.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_sprite.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_sprite_def.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_stream.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_string_object.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_styles.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_tesselate.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_text.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_tools.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_types.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_value.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_video_impl.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\base\container.cpp">
+      <Filter>jni\base</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\base\ear_clip_triangulate_float.cpp">
+      <Filter>jni\base</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\base\ear_clip_triangulate_sint16.cpp">
+      <Filter>jni\base</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\base\file_util.cpp">
+      <Filter>jni\base</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\base\image.cpp">
+      <Filter>jni\base</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\base\image_filters.cpp">
+      <Filter>jni\base</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\base\jpeg.cpp">
+      <Filter>jni\base</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\base\logger.cpp">
+      <Filter>jni\base</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\base\md5.cpp">
+      <Filter>jni\base</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\base\membuf.cpp">
+      <Filter>jni\base</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\base\png_helper.cpp">
+      <Filter>jni\base</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\base\triangulate_float.cpp">
+      <Filter>jni\base</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\base\triangulate_sint32.cpp">
+      <Filter>jni\base</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\base\tu_file.cpp">
+      <Filter>jni\base</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\base\tu_loadlib.cpp">
+      <Filter>jni\base</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\base\tu_random.cpp">
+      <Filter>jni\base</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\base\tu_timer.cpp">
+      <Filter>jni\base</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\base\tu_types.cpp">
+      <Filter>jni\base</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\base\utf8.cpp">
+      <Filter>jni\base</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\base\utility.cpp">
+      <Filter>jni\base</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\base\zlib_adapter.cpp">
+      <Filter>jni\base</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_array.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_boolean.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_broadcaster.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_camera.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_class.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_color.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_color_transform.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_date.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_event.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_event_dispatcher.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_global.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_iaccel.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_imap.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_inapp.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_iOS.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_key.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_math.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_matrix.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_mcloader.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_microphone.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_mouse.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_netconnection.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_netstream.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_number.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_point.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_selection.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_sharedobject.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_sound.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_string.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_textformat.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_transform.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_urlvariables.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_xml.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_xmlsocket.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\cdjpeg.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jcapimin.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jcapistd.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jccoefct.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jccolor.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jcdctmgr.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jchuff.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jcinit.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jcmainct.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jcmarker.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jcmaster.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jcomapi.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jcparam.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jcphuff.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jcprepct.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jcsample.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jctrans.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jdapimin.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jdapistd.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jdatadst.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jdatasrc.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jdcoefct.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jdcolor.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jddctmgr.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jdhuff.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jdinput.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jdmainct.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jdmarker.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jdmaster.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jdmerge.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jdphuff.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jdpostct.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jdsample.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jdtrans.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jerror.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jfdctflt.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jfdctfst.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jfdctint.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jidctflt.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jidctfst.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jidctint.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jidctred.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jmemansi.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jmemmgr.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jquant1.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jquant2.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\jutils.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\rdbmp.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\rdcolmap.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\rdgif.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\rdppm.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\rdrle.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\rdswitch.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\rdtarga.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\transupp.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\wrbmp.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\wrgif.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\wrppm.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\wrrle.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\jpeglib\wrtarga.c">
+      <Filter>jni\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\OpenAL\OpenAL32\alAuxEffectSlot.c">
+      <Filter>jni\openAL</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\OpenAL\OpenAL32\alBuffer.c">
+      <Filter>jni\openAL</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\OpenAL\OpenAL32\alDatabuffer.c">
+      <Filter>jni\openAL</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\OpenAL\OpenAL32\alEffect.c">
+      <Filter>jni\openAL</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\OpenAL\OpenAL32\alError.c">
+      <Filter>jni\openAL</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\OpenAL\OpenAL32\alExtension.c">
+      <Filter>jni\openAL</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\OpenAL\OpenAL32\alFilter.c">
+      <Filter>jni\openAL</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\OpenAL\OpenAL32\alListener.c">
+      <Filter>jni\openAL</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\OpenAL\OpenAL32\alSource.c">
+      <Filter>jni\openAL</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\OpenAL\OpenAL32\alState.c">
+      <Filter>jni\openAL</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\OpenAL\OpenAL32\alThunk.c">
+      <Filter>jni\openAL</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\OpenAL\Alc\ALc.c">
+      <Filter>jni\openAL</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\OpenAL\Alc\alcConfig.c">
+      <Filter>jni\openAL</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\OpenAL\Alc\alcEcho.c">
+      <Filter>jni\openAL</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\OpenAL\Alc\alcModulator.c">
+      <Filter>jni\openAL</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\OpenAL\Alc\alcReverb.c">
+      <Filter>jni\openAL</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\OpenAL\Alc\alcRing.c">
+      <Filter>jni\openAL</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\OpenAL\Alc\alcThread.c">
+      <Filter>jni\openAL</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\OpenAL\Alc\ALu.c">
+      <Filter>jni\openAL</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\OpenAL\Alc\android.c">
+      <Filter>jni\openAL</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\OpenAL\Alc\bs2b.c">
+      <Filter>jni\openAL</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\OpenAL\Alc\null.c">
+      <Filter>jni\openAL</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\pugixml\pugixml.cpp">
+      <Filter>jni\puggi</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\sqlite3\sqlite3.c">
+      <Filter>jni\plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\plugins\sqlite\sqlite_db.cpp">
+      <Filter>jni\plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\plugins\sqlite\sqlite_table.cpp">
+      <Filter>jni\plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\zlib\adler32.c">
+      <Filter>jni\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\zlib\compress.c">
+      <Filter>jni\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\zlib\crc32.c">
+      <Filter>jni\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\zlib\deflate.c">
+      <Filter>jni\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\zlib\gzclose.c">
+      <Filter>jni\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\zlib\gzlib.c">
+      <Filter>jni\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\zlib\gzread.c">
+      <Filter>jni\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\zlib\gzwrite.c">
+      <Filter>jni\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\zlib\infback.c">
+      <Filter>jni\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\zlib\inffast.c">
+      <Filter>jni\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\zlib\inflate.c">
+      <Filter>jni\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\zlib\inftrees.c">
+      <Filter>jni\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\zlib\trees.c">
+      <Filter>jni\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\zlib\uncompr.c">
+      <Filter>jni\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\zlib\zutil.c">
+      <Filter>jni\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\bakeinflash\bakeinflash_as_classes\as_iwww.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\bakeinflash\plugins\file\bakeinflash_file_plugin.cpp">
+      <Filter>jni\plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\lib3ds\atmosphere.c">
+      <Filter>lib3ds</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\lib3ds\background.c">
+      <Filter>lib3ds</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\lib3ds\camera.c">
+      <Filter>lib3ds</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\lib3ds\chunk.c">
+      <Filter>lib3ds</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\lib3ds\ease.c">
+      <Filter>lib3ds</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\lib3ds\file.c">
+      <Filter>lib3ds</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\lib3ds\io.c">
+      <Filter>lib3ds</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\lib3ds\light.c">
+      <Filter>lib3ds</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\lib3ds\material.c">
+      <Filter>lib3ds</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\lib3ds\matrix.c">
+      <Filter>lib3ds</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\lib3ds\mesh.c">
+      <Filter>lib3ds</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\lib3ds\node.c">
+      <Filter>lib3ds</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\lib3ds\quat.c">
+      <Filter>lib3ds</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\lib3ds\shadow.c">
+      <Filter>lib3ds</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\lib3ds\tcb.c">
+      <Filter>lib3ds</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\lib3ds\tracks.c">
+      <Filter>lib3ds</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\lib3ds\vector.c">
+      <Filter>lib3ds</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\lib3ds\viewport.c">
+      <Filter>lib3ds</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\bakeinflash\bakeinflash_as_classes\as_flash.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\bakeinflash\bakeinflash_as_classes\as_bitmapdata.cpp">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\bakeinflash\bakeinflash_tcp.cpp">
+      <Filter>jni\bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\bakeinflash\plugins\sysinfo\sysinfo.cpp">
+      <Filter>jni\plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\piff\msplayer_piff.cpp">
+      <Filter>jni\piff</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="jni\bakeinflash\bakeinflash.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_abc.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_action.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_sprite.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_avm2.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_button.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_canvas.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_character.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_disasm.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_dlist.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_environment.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_filters.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_font.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_fontlib.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_freetype.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_function.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_impl.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_json.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_listener.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_log.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_md5.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_morph2.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_movie_def.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_mutex.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_object.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_render.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_root.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_shape.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_sound.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_sound_handler_openal.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_sprite.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_sprite_def.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_stream.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_string_object.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_styles.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_tesselate.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_text.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_text_.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_types.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_value.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_video_impl.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\container.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\ear_clip_triangulate.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\ear_clip_triangulate_impl.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\file_util.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\grid_index.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\image.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\jpeg.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\logger.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\md5.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\membuf.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\png_helper.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\smart_ptr.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\triangulate.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\triangulate_impl.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\tu_config.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\tu_file.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\tu_loadlib.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\tu_math.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\tu_memdebug.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\tu_queue.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\tu_random.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\tu_swap.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\tu_timer.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\tu_types.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\utf8.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\utility.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\vert_types.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\base\zlib_adapter.h">
+      <Filter>jni\base</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_array.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_boolean.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_broadcaster.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_camera.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_camera_.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_class.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_color.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_color_transform.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_date.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_event.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_event_dispatcher.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_global.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_iaccel.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_iaccel_.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_igamecenter.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_imap.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_imap_.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_inapp.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_inapp_.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_iOS.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_iOS_.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_itextview.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_iwww.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_key.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_math.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_matrix.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_mcloader.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_microphone.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_mouse.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_netconnection.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_netstream.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_number.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_point.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_selection.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_sharedobject.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_sound.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_string.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_textformat.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_transform.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_urlvariables.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_xml.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_xmlsocket.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\jpeglib\cderror.h">
+      <Filter>jni\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\jpeglib\cdjpeg.h">
+      <Filter>jni\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\jpeglib\jchuff.h">
+      <Filter>jni\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\jpeglib\jconfig.h">
+      <Filter>jni\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\jpeglib\jdct.h">
+      <Filter>jni\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\jpeglib\jdhuff.h">
+      <Filter>jni\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\jpeglib\jerror.h">
+      <Filter>jni\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\jpeglib\jinclude.h">
+      <Filter>jni\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\jpeglib\jmemsys.h">
+      <Filter>jni\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\jpeglib\jmorecfg.h">
+      <Filter>jni\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\jpeglib\jpegint.h">
+      <Filter>jni\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\jpeglib\jpeglib.h">
+      <Filter>jni\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\jpeglib\jversion.h">
+      <Filter>jni\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\jpeglib\transupp.h">
+      <Filter>jni\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\pugixml\pugiconfig.hpp">
+      <Filter>jni\puggi</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\pugixml\pugixml.hpp">
+      <Filter>jni\puggi</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\sqlite3\sqlite3.h">
+      <Filter>jni\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\sqlite3\sqlite3ext.h">
+      <Filter>jni\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\plugins\sqlite\sqlite_db.h">
+      <Filter>jni\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\plugins\sqlite\sqlite_table.h">
+      <Filter>jni\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\compatibility_include.h">
+      <Filter>jni</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\ft2build.h">
+      <Filter>jni</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\keycodes.h">
+      <Filter>jni</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\sqlite3.h">
+      <Filter>jni</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\zlib\crc32.h">
+      <Filter>jni\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\zlib\deflate.h">
+      <Filter>jni\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\zlib\gzguts.h">
+      <Filter>jni\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\zlib\inffast.h">
+      <Filter>jni\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\zlib\inffixed.h">
+      <Filter>jni\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\zlib\inflate.h">
+      <Filter>jni\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\zlib\inftrees.h">
+      <Filter>jni\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\zlib\trees.h">
+      <Filter>jni\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\zlib\zconf.h">
+      <Filter>jni\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\zlib\zlib.h">
+      <Filter>jni\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\zlib\zutil.h">
+      <Filter>jni\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\bakeinflash\plugins\file\bakeinflash_file_plugin.h">
+      <Filter>jni\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\lib3ds\atmosphere.h">
+      <Filter>lib3ds</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\lib3ds\background.h">
+      <Filter>lib3ds</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\lib3ds\camera.h">
+      <Filter>lib3ds</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\lib3ds\chunk.h">
+      <Filter>lib3ds</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\lib3ds\chunktable.h">
+      <Filter>lib3ds</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\lib3ds\ease.h">
+      <Filter>lib3ds</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\lib3ds\file.h">
+      <Filter>lib3ds</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\lib3ds\io.h">
+      <Filter>lib3ds</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\lib3ds\light.h">
+      <Filter>lib3ds</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\lib3ds\material.h">
+      <Filter>lib3ds</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\lib3ds\matrix.h">
+      <Filter>lib3ds</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\lib3ds\mesh.h">
+      <Filter>lib3ds</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\lib3ds\node.h">
+      <Filter>lib3ds</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\lib3ds\quat.h">
+      <Filter>lib3ds</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\lib3ds\shadow.h">
+      <Filter>lib3ds</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\lib3ds\tcb.h">
+      <Filter>lib3ds</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\lib3ds\tracks.h">
+      <Filter>lib3ds</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\lib3ds\types.h">
+      <Filter>lib3ds</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\lib3ds\vector.h">
+      <Filter>lib3ds</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\lib3ds\viewport.h">
+      <Filter>lib3ds</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\bakeinflash\bakeinflash_as_classes\as_flash.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\bakeinflash\bakeinflash_as_classes\as_bitmapdata.h">
+      <Filter>jni\bakeinflash\as_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\bakeinflash\bakeinflash_tcp.h">
+      <Filter>jni\bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\bakeinflash\plugins\sysinfo\dirent.h">
+      <Filter>jni\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\bakeinflash\plugins\sysinfo\sysinfo.h">
+      <Filter>jni\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\piff\msplayer_piff.h">
+      <Filter>jni\piff</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\layout\main.xml">
+      <Filter>res\layout</Filter>
+    </None>
+    <None Include="res\drawable\icon.png">
+      <Filter>res\drawable</Filter>
+    </None>
+    <None Include="libs\mobilecore_V1.1.jar">
+      <Filter>libs</Filter>
+    </None>
+    <None Include="jni\Android.mk">
+      <Filter>jni</Filter>
+    </None>
+    <None Include="jni\Application.mk">
+      <Filter>jni</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <JCompile Include="src\com\microslots\bakeinflash.java">
+      <Filter>src\com</Filter>
+    </JCompile>
+    <JCompile Include="src\com\microslots\myWebView.java">
+      <Filter>src\com</Filter>
+    </JCompile>
+    <JCompile Include="src\com\microslots\global.java">
+      <Filter>src\com</Filter>
+    </JCompile>
+    <JCompile Include="src\com\microslots\myEditText.java">
+      <Filter>src\com</Filter>
+    </JCompile>
+  </ItemGroup>
+</Project>

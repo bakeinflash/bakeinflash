@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="NsightTegraProject">
+    <NsightTegraProjectRevisionNumber>11</NsightTegraProjectRevisionNumber>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Tegra-Android">
+      <Configuration>Debug</Configuration>
+      <Platform>Tegra-Android</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Tegra-Android">
+      <Configuration>Release</Configuration>
+      <Platform>Tegra-Android</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profile|Tegra-Android">
+      <Configuration>Profile</Configuration>
+      <Platform>Tegra-Android</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E38600D3-0026-4375-A3D1-25B2AB283DFB}</ProjectGuid>
+    <RootNamespace>bakeinflash</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Tegra-Android'">
+    <AndroidTargetAPI>android-11</AndroidTargetAPI>
+    <AndroidNativeAPI>android-11</AndroidNativeAPI>
+    <AndroidMinAPI>android-11</AndroidMinAPI>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Tegra-Android'">
+    <AndroidTargetAPI>android-15</AndroidTargetAPI>
+    <AndroidNativeAPI>UseTarget</AndroidNativeAPI>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Profile|Tegra-Android'">
+    <AndroidTargetAPI>android-15</AndroidTargetAPI>
+    <AndroidNativeAPI>UseTarget</AndroidNativeAPI>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Tegra-Android'">
+    <IncludePath>$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)</IntDir>
+    <FastDeploy>false</FastDeploy>
+    <DeployAfterBuild>None</DeployAfterBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Tegra-Android'">
+    <ClCompile>
+      <PreprocessorDefinitions>DISABLE_IMPORTGL;AL_BUILD_LIBRARY;AL_ALEXT_PROTOTYPES;USE_SSL;TU_CONFIG_LINK_TO_MYSQL=0</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\bakeinflash\libbakeinflash\bakeinflash\bakeinflash\jni;C:\bakeinflash\libbakeinflash\bakeinflash\bakeinflash\jni\OpenAL;C:\bakeinflash\libbakeinflash\Classes\bakeinflash\plugins;C:\PlayReady\Device_PK_3.0.4019.0\source\inc;C:\PlayReady\Device_PK_3.0.4019.0\source\oem\common\inc;C:\PlayReady\Device_PK_3.0.4019.0\source\oem\ansi\inc;C:\PlayReady\Device_PK_3.0.4019.0\source\results;C:\PlayReady\Device_PK_3.0.4019.0\source\tools\shared\common;C:\PlayReady\Device_PK_3.0.4019.0\source\modules\bcertformat\common;C:\PlayReady\Device_PK_3.0.4019.0\source\modules\contentspecific\h264\real;C:\PlayReady\Device_PK_3.0.4019.0\source\securecore\trustedexec\base;C:\PlayReady\Device_PK_3.0.4019.0\source\modules\secure_clock\real;C:\PlayReady\Device_PK_3.0.4019.0\source\trustedexec\inc;C:\PlayReady\Device_PK_3.0.4019.0\source\trustedexec\base;C:\PlayReady\Device_PK_3.0.4019.0\source\trustedexec\teeproxystub\stub\common;C:\PlayReady\Device_PK_3.0.4019.0\source\trustedexec\debug;C:\PlayReady\Device_PK_3.0.4019.0\source\trustedexec\teeproxystub\common;C:\PlayReady\Device_PK_3.0.4019.0\source\oem\common\trustedexec;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OptimizationLevel>O3</OptimizationLevel>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>-lGLESv1_CM -llog %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>C:\bakeinflash\libbakeinflash\bakeinflash\bakeinflash\jni;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>C:\bakeinflash\libbakeinflash\bakeinflash\bakeinflash\jni\libavformat.a;C:\bakeinflash\libbakeinflash\bakeinflash\bakeinflash\jni\libavcodec.a;C:\bakeinflash\libbakeinflash\bakeinflash\bakeinflash\jni\libswscale.a;C:\bakeinflash\libbakeinflash\bakeinflash\bakeinflash\jni\libavutil.a;C:\bakeinflash\libbakeinflash\bakeinflash\bakeinflash\jni\libswresample.a;C:\bakeinflash\libbakeinflash\bakeinflash\bakeinflash\jni\libfreetype.a;C:\bakeinflash\libbakeinflash\bakeinflash\bakeinflash\jni\libssl.a;C:\bakeinflash\libbakeinflash\bakeinflash\bakeinflash\jni\libcrypto.a</AdditionalDependencies>
+    </Link>
+    <AntBuild>
+      <AntBuildPath>$(ProjectDir)\</AntBuildPath>
+      <NativeLibDirectories>%(NativeLibDirectories)</NativeLibDirectories>
+      <NativeLibDependencies>%(NativeLibDependencies)</NativeLibDependencies>
+    </AntBuild>
+    <CustomBuildStep>
+      <Inputs>%(Inputs)</Inputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Tegra-Android'">
+    <ClCompile>
+      <PreprocessorDefinitions>DISABLE_IMPORTGL;AL_BUILD_LIBRARY;AL_ALEXT_PROTOTYPES</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\bakeinflash\libbakeinflash\bakeinflash\bakeinflash\jni;C:\bakeinflash\libbakeinflash\bakeinflash\bakeinflash\jni\OpenAL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>-lGLESv1_CM -lz -llog %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>C:\bakeinflash\libbakeinflash\bakeinflash\bakeinflash\jni;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>C:\bakeinflash\libbakeinflash\bakeinflash\bakeinflash\jni\libavformat.a;C:\bakeinflash\libbakeinflash\bakeinflash\bakeinflash\jni\libavcodec.a;C:\bakeinflash\libbakeinflash\bakeinflash\bakeinflash\jni\libswscale.a;C:\bakeinflash\libbakeinflash\bakeinflash\bakeinflash\jni\libavutil.a;C:\bakeinflash\libbakeinflash\bakeinflash\bakeinflash\jni\libfreetype.a</AdditionalDependencies>
+    </Link>
+    <AntBuild>
+      <AntBuildPath>$(ProjectDir)\</AntBuildPath>
+    </AntBuild>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Tegra-Android'">
+    <ClCompile>
+      <PreprocessorDefinitions>DISABLE_IMPORTGL</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>-lGLESv1_CM %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <AntBuild>
+      <AntBuildPath>$(ProjectDir)\</AntBuildPath>
+    </AntBuild>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <AndroidBuild Include="AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </AndroidBuild>
+    <AndroidBuild Include="build.xml">
+      <SubType>Designer</SubType>
+    </AndroidBuild>
+    <AndroidBuild Include="project.properties" />
+    <AndroidBuild Include="proguard.cfg" />
+    <AndroidBuild Include="res\values\strings.xml">
+      <SubType>Designer</SubType>
+    </AndroidBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Classes\bakeinflash\bakeinflash_as_classes\as_bitmapdata.cpp" />
+    <ClCompile Include="..\..\Classes\bakeinflash\bakeinflash_as_classes\as_flash.cpp" />
+    <ClCompile Include="..\..\Classes\bakeinflash\bakeinflash_as_classes\as_iwww.cpp" />
+    <ClCompile Include="..\..\Classes\bakeinflash\plugins\file\bakeinflash_file_plugin.cpp" />
+    <ClCompile Include="..\..\Classes\bakeinflash\plugins\sysinfo\sysinfo.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_abc.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_action.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_array.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_boolean.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_broadcaster.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_camera.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_class.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_color.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_color_transform.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_date.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_event.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_event_dispatcher.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_global.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_iaccel.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_imap.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_inapp.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_iOS.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_key.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_math.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_matrix.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_mcloader.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_microphone.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_mouse.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_netconnection.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_netstream.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_number.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_point.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_selection.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_sharedobject.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_sound.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_string.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_textformat.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_transform.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_urlvariables.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_xml.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_classes\as_xmlsocket.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_as_sprite.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_avm2.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_avm2_jit.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_button.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_canvas.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_character.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_disasm.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_dlist.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_environment.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_filters.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_font.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_fontlib.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_freetype.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_function.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_impl.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_json.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_listener.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_log.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_md5.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_morph2.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_movie_def.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_mutex.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_object.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_player.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_render.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_render_handler_ogles.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_root.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_shape.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_sound.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_sound_handler_openal.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_sprite.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_sprite_def.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_stream.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_string_object.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_styles.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_tcp.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_tesselate.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_text.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_tools.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_types.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_value.cpp" />
+    <ClCompile Include="jni\bakeinflash\bakeinflash_video_impl.cpp" />
+    <ClCompile Include="jni\bakeinflash\plugins\sqlite\sqlite_db.cpp" />
+    <ClCompile Include="jni\bakeinflash\plugins\sqlite\sqlite_table.cpp" />
+    <ClCompile Include="jni\base\container.cpp" />
+    <ClCompile Include="jni\base\ear_clip_triangulate_float.cpp" />
+    <ClCompile Include="jni\base\ear_clip_triangulate_sint16.cpp" />
+    <ClCompile Include="jni\base\file_util.cpp" />
+    <ClCompile Include="jni\base\image.cpp" />
+    <ClCompile Include="jni\base\image_filters.cpp" />
+    <ClCompile Include="jni\base\jpeg.cpp" />
+    <ClCompile Include="jni\base\logger.cpp" />
+    <ClCompile Include="jni\base\md5.cpp" />
+    <ClCompile Include="jni\base\membuf.cpp" />
+    <ClCompile Include="jni\base\png_helper.cpp" />
+    <ClCompile Include="jni\base\triangulate_float.cpp" />
+    <ClCompile Include="jni\base\triangulate_sint32.cpp" />
+    <ClCompile Include="jni\base\tu_file.cpp" />
+    <ClCompile Include="jni\base\tu_loadlib.cpp" />
+    <ClCompile Include="jni\base\tu_random.cpp" />
+    <ClCompile Include="jni\base\tu_timer.cpp" />
+    <ClCompile Include="jni\base\tu_types.cpp" />
+    <ClCompile Include="jni\base\utf8.cpp" />
+    <ClCompile Include="jni\base\utility.cpp" />
+    <ClCompile Include="jni\base\zlib_adapter.cpp" />
+    <ClCompile Include="jni\jpeglib\cdjpeg.c" />
+    <ClCompile Include="jni\jpeglib\jcapimin.c" />
+    <ClCompile Include="jni\jpeglib\jcapistd.c" />
+    <ClCompile Include="jni\jpeglib\jccoefct.c" />
+    <ClCompile Include="jni\jpeglib\jccolor.c" />
+    <ClCompile Include="jni\jpeglib\jcdctmgr.c" />
+    <ClCompile Include="jni\jpeglib\jchuff.c" />
+    <ClCompile Include="jni\jpeglib\jcinit.c" />
+    <ClCompile Include="jni\jpeglib\jcmainct.c" />
+    <ClCompile Include="jni\jpeglib\jcmarker.c" />
+    <ClCompile Include="jni\jpeglib\jcmaster.c" />
+    <ClCompile Include="jni\jpeglib\jcomapi.c" />
+    <ClCompile Include="jni\jpeglib\jcparam.c" />
+    <ClCompile Include="jni\jpeglib\jcphuff.c" />
+    <ClCompile Include="jni\jpeglib\jcprepct.c" />
+    <ClCompile Include="jni\jpeglib\jcsample.c" />
+    <ClCompile Include="jni\jpeglib\jctrans.c" />
+    <ClCompile Include="jni\jpeglib\jdapimin.c" />
+    <ClCompile Include="jni\jpeglib\jdapistd.c" />
+    <ClCompile Include="jni\jpeglib\jdatadst.c" />
+    <ClCompile Include="jni\jpeglib\jdatasrc.c" />
+    <ClCompile Include="jni\jpeglib\jdcoefct.c" />
+    <ClCompile Include="jni\jpeglib\jdcolor.c" />
+    <ClCompile Include="jni\jpeglib\jddctmgr.c" />
+    <ClCompile Include="jni\jpeglib\jdhuff.c" />
+    <ClCompile Include="jni\jpeglib\jdinput.c" />
+    <ClCompile Include="jni\jpeglib\jdmainct.c" />
+    <ClCompile Include="jni\jpeglib\jdmarker.c" />
+    <ClCompile Include="jni\jpeglib\jdmaster.c" />
+    <ClCompile Include="jni\jpeglib\jdmerge.c" />
+    <ClCompile Include="jni\jpeglib\jdphuff.c" />
+    <ClCompile Include="jni\jpeglib\jdpostct.c" />
+    <ClCompile Include="jni\jpeglib\jdsample.c" />
+    <ClCompile Include="jni\jpeglib\jdtrans.c" />
+    <ClCompile Include="jni\jpeglib\jerror.c" />
+    <ClCompile Include="jni\jpeglib\jfdctflt.c" />
+    <ClCompile Include="jni\jpeglib\jfdctfst.c" />
+    <ClCompile Include="jni\jpeglib\jfdctint.c" />
+    <ClCompile Include="jni\jpeglib\jidctflt.c" />
+    <ClCompile Include="jni\jpeglib\jidctfst.c" />
+    <ClCompile Include="jni\jpeglib\jidctint.c" />
+    <ClCompile Include="jni\jpeglib\jidctred.c" />
+    <ClCompile Include="jni\jpeglib\jmemansi.c" />
+    <ClCompile Include="jni\jpeglib\jmemmgr.c" />
+    <ClCompile Include="jni\jpeglib\jquant1.c" />
+    <ClCompile Include="jni\jpeglib\jquant2.c" />
+    <ClCompile Include="jni\jpeglib\jutils.c" />
+    <ClCompile Include="jni\jpeglib\rdbmp.c" />
+    <ClCompile Include="jni\jpeglib\rdcolmap.c" />
+    <ClCompile Include="jni\jpeglib\rdgif.c" />
+    <ClCompile Include="jni\jpeglib\rdppm.c" />
+    <ClCompile Include="jni\jpeglib\rdrle.c" />
+    <ClCompile Include="jni\jpeglib\rdswitch.c" />
+    <ClCompile Include="jni\jpeglib\rdtarga.c" />
+    <ClCompile Include="jni\jpeglib\transupp.c" />
+    <ClCompile Include="jni\jpeglib\wrbmp.c" />
+    <ClCompile Include="jni\jpeglib\wrgif.c" />
+    <ClCompile Include="jni\jpeglib\wrppm.c" />
+    <ClCompile Include="jni\jpeglib\wrrle.c" />
+    <ClCompile Include="jni\jpeglib\wrtarga.c" />
+    <ClCompile Include="jni\lib3ds\atmosphere.c" />
+    <ClCompile Include="jni\lib3ds\background.c" />
+    <ClCompile Include="jni\lib3ds\camera.c" />
+    <ClCompile Include="jni\lib3ds\chunk.c" />
+    <ClCompile Include="jni\lib3ds\ease.c" />
+    <ClCompile Include="jni\lib3ds\file.c" />
+    <ClCompile Include="jni\lib3ds\io.c" />
+    <ClCompile Include="jni\lib3ds\light.c" />
+    <ClCompile Include="jni\lib3ds\material.c" />
+    <ClCompile Include="jni\lib3ds\matrix.c" />
+    <ClCompile Include="jni\lib3ds\mesh.c" />
+    <ClCompile Include="jni\lib3ds\node.c" />
+    <ClCompile Include="jni\lib3ds\quat.c" />
+    <ClCompile Include="jni\lib3ds\shadow.c" />
+    <ClCompile Include="jni\lib3ds\tcb.c" />
+    <ClCompile Include="jni\lib3ds\tracks.c" />
+    <ClCompile Include="jni\lib3ds\vector.c" />
+    <ClCompile Include="jni\lib3ds\viewport.c" />
+    <ClCompile Include="jni\main.cpp" />
+    <ClCompile Include="jni\OpenAL\Alc\ALc.c" />
+    <ClCompile Include="jni\OpenAL\Alc\alcConfig.c" />
+    <ClCompile Include="jni\OpenAL\Alc\alcEcho.c" />
+    <ClCompile Include="jni\OpenAL\Alc\alcModulator.c" />
+    <ClCompile Include="jni\OpenAL\Alc\alcReverb.c" />
+    <ClCompile Include="jni\OpenAL\Alc\alcRing.c" />
+    <ClCompile Include="jni\OpenAL\Alc\alcThread.c" />
+    <ClCompile Include="jni\OpenAL\Alc\ALu.c" />
+    <ClCompile Include="jni\OpenAL\Alc\android.c" />
+    <ClCompile Include="jni\OpenAL\Alc\bs2b.c" />
+    <ClCompile Include="jni\OpenAL\Alc\null.c" />
+    <ClCompile Include="jni\OpenAL\OpenAL32\alAuxEffectSlot.c" />
+    <ClCompile Include="jni\OpenAL\OpenAL32\alBuffer.c" />
+    <ClCompile Include="jni\OpenAL\OpenAL32\alDatabuffer.c" />
+    <ClCompile Include="jni\OpenAL\OpenAL32\alEffect.c" />
+    <ClCompile Include="jni\OpenAL\OpenAL32\alError.c" />
+    <ClCompile Include="jni\OpenAL\OpenAL32\alExtension.c" />
+    <ClCompile Include="jni\OpenAL\OpenAL32\alFilter.c" />
+    <ClCompile Include="jni\OpenAL\OpenAL32\alListener.c" />
+    <ClCompile Include="jni\OpenAL\OpenAL32\alSource.c" />
+    <ClCompile Include="jni\OpenAL\OpenAL32\alState.c" />
+    <ClCompile Include="jni\OpenAL\OpenAL32\alThunk.c" />
+    <ClCompile Include="jni\piff\msplayer_piff.cpp" />
+    <ClCompile Include="jni\pugixml\pugixml.cpp" />
+    <ClCompile Include="jni\sqlite3\sqlite3.c" />
+    <ClCompile Include="jni\zlib\adler32.c" />
+    <ClCompile Include="jni\zlib\compress.c" />
+    <ClCompile Include="jni\zlib\crc32.c" />
+    <ClCompile Include="jni\zlib\deflate.c" />
+    <ClCompile Include="jni\zlib\gzclose.c" />
+    <ClCompile Include="jni\zlib\gzlib.c" />
+    <ClCompile Include="jni\zlib\gzread.c" />
+    <ClCompile Include="jni\zlib\gzwrite.c" />
+    <ClCompile Include="jni\zlib\infback.c" />
+    <ClCompile Include="jni\zlib\inffast.c" />
+    <ClCompile Include="jni\zlib\inflate.c" />
+    <ClCompile Include="jni\zlib\inftrees.c" />
+    <ClCompile Include="jni\zlib\trees.c" />
+    <ClCompile Include="jni\zlib\uncompr.c" />
+    <ClCompile Include="jni\zlib\zutil.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Classes\bakeinflash\bakeinflash_as_classes\as_bitmapdata.h" />
+    <ClInclude Include="..\..\Classes\bakeinflash\bakeinflash_as_classes\as_flash.h" />
+    <ClInclude Include="..\..\Classes\bakeinflash\plugins\file\bakeinflash_file_plugin.h" />
+    <ClInclude Include="..\..\Classes\bakeinflash\plugins\sysinfo\dirent.h" />
+    <ClInclude Include="..\..\Classes\bakeinflash\plugins\sysinfo\sysinfo.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_abc.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_action.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_array.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_boolean.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_broadcaster.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_camera.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_camera_.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_class.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_color.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_color_transform.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_date.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_event.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_event_dispatcher.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_global.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_iaccel.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_iaccel_.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_igamecenter.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_imap.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_imap_.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_inapp.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_inapp_.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_iOS.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_iOS_.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_itextview.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_iwww.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_key.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_math.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_matrix.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_mcloader.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_microphone.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_mouse.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_netconnection.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_netstream.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_number.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_point.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_selection.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_sharedobject.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_sound.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_string.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_textformat.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_transform.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_urlvariables.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_xml.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_classes\as_xmlsocket.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_as_sprite.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_avm2.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_button.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_canvas.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_character.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_disasm.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_dlist.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_environment.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_filters.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_font.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_fontlib.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_freetype.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_function.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_impl.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_json.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_listener.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_log.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_md5.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_morph2.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_movie_def.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_mutex.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_object.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_render.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_root.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_shape.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_sound.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_sound_handler_openal.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_sprite.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_sprite_def.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_stream.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_string_object.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_styles.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_tcp.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_tesselate.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_text.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_text_.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_types.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_value.h" />
+    <ClInclude Include="jni\bakeinflash\bakeinflash_video_impl.h" />
+    <ClInclude Include="jni\bakeinflash\plugins\sqlite\sqlite_db.h" />
+    <ClInclude Include="jni\bakeinflash\plugins\sqlite\sqlite_table.h" />
+    <ClInclude Include="jni\base\container.h" />
+    <ClInclude Include="jni\base\ear_clip_triangulate.h" />
+    <ClInclude Include="jni\base\ear_clip_triangulate_impl.h" />
+    <ClInclude Include="jni\base\file_util.h" />
+    <ClInclude Include="jni\base\grid_index.h" />
+    <ClInclude Include="jni\base\image.h" />
+    <ClInclude Include="jni\base\jpeg.h" />
+    <ClInclude Include="jni\base\logger.h" />
+    <ClInclude Include="jni\base\md5.h" />
+    <ClInclude Include="jni\base\membuf.h" />
+    <ClInclude Include="jni\base\png_helper.h" />
+    <ClInclude Include="jni\base\smart_ptr.h" />
+    <ClInclude Include="jni\base\triangulate.h" />
+    <ClInclude Include="jni\base\triangulate_impl.h" />
+    <ClInclude Include="jni\base\tu_config.h" />
+    <ClInclude Include="jni\base\tu_file.h" />
+    <ClInclude Include="jni\base\tu_loadlib.h" />
+    <ClInclude Include="jni\base\tu_math.h" />
+    <ClInclude Include="jni\base\tu_memdebug.h" />
+    <ClInclude Include="jni\base\tu_queue.h" />
+    <ClInclude Include="jni\base\tu_random.h" />
+    <ClInclude Include="jni\base\tu_swap.h" />
+    <ClInclude Include="jni\base\tu_timer.h" />
+    <ClInclude Include="jni\base\tu_types.h" />
+    <ClInclude Include="jni\base\utf8.h" />
+    <ClInclude Include="jni\base\utility.h" />
+    <ClInclude Include="jni\base\vert_types.h" />
+    <ClInclude Include="jni\base\zlib_adapter.h" />
+    <ClInclude Include="jni\compatibility_include.h" />
+    <ClInclude Include="jni\ft2build.h" />
+    <ClInclude Include="jni\jpeglib\cderror.h" />
+    <ClInclude Include="jni\jpeglib\cdjpeg.h" />
+    <ClInclude Include="jni\jpeglib\jchuff.h" />
+    <ClInclude Include="jni\jpeglib\jconfig.h" />
+    <ClInclude Include="jni\jpeglib\jdct.h" />
+    <ClInclude Include="jni\jpeglib\jdhuff.h" />
+    <ClInclude Include="jni\jpeglib\jerror.h" />
+    <ClInclude Include="jni\jpeglib\jinclude.h" />
+    <ClInclude Include="jni\jpeglib\jmemsys.h" />
+    <ClInclude Include="jni\jpeglib\jmorecfg.h" />
+    <ClInclude Include="jni\jpeglib\jpegint.h" />
+    <ClInclude Include="jni\jpeglib\jpeglib.h" />
+    <ClInclude Include="jni\jpeglib\jversion.h" />
+    <ClInclude Include="jni\jpeglib\transupp.h" />
+    <ClInclude Include="jni\keycodes.h" />
+    <ClInclude Include="jni\lib3ds\atmosphere.h" />
+    <ClInclude Include="jni\lib3ds\background.h" />
+    <ClInclude Include="jni\lib3ds\camera.h" />
+    <ClInclude Include="jni\lib3ds\chunk.h" />
+    <ClInclude Include="jni\lib3ds\chunktable.h" />
+    <ClInclude Include="jni\lib3ds\ease.h" />
+    <ClInclude Include="jni\lib3ds\file.h" />
+    <ClInclude Include="jni\lib3ds\io.h" />
+    <ClInclude Include="jni\lib3ds\light.h" />
+    <ClInclude Include="jni\lib3ds\material.h" />
+    <ClInclude Include="jni\lib3ds\matrix.h" />
+    <ClInclude Include="jni\lib3ds\mesh.h" />
+    <ClInclude Include="jni\lib3ds\node.h" />
+    <ClInclude Include="jni\lib3ds\quat.h" />
+    <ClInclude Include="jni\lib3ds\shadow.h" />
+    <ClInclude Include="jni\lib3ds\tcb.h" />
+    <ClInclude Include="jni\lib3ds\tracks.h" />
+    <ClInclude Include="jni\lib3ds\types.h" />
+    <ClInclude Include="jni\lib3ds\vector.h" />
+    <ClInclude Include="jni\lib3ds\viewport.h" />
+    <ClInclude Include="jni\piff\msplayer_piff.h" />
+    <ClInclude Include="jni\pugixml\pugiconfig.hpp" />
+    <ClInclude Include="jni\pugixml\pugixml.hpp" />
+    <ClInclude Include="jni\sqlite3.h" />
+    <ClInclude Include="jni\sqlite3\sqlite3.h" />
+    <ClInclude Include="jni\sqlite3\sqlite3ext.h" />
+    <ClInclude Include="jni\zlib\crc32.h" />
+    <ClInclude Include="jni\zlib\deflate.h" />
+    <ClInclude Include="jni\zlib\gzguts.h" />
+    <ClInclude Include="jni\zlib\inffast.h" />
+    <ClInclude Include="jni\zlib\inffixed.h" />
+    <ClInclude Include="jni\zlib\inflate.h" />
+    <ClInclude Include="jni\zlib\inftrees.h" />
+    <ClInclude Include="jni\zlib\trees.h" />
+    <ClInclude Include="jni\zlib\zconf.h" />
+    <ClInclude Include="jni\zlib\zlib.h" />
+    <ClInclude Include="jni\zlib\zutil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="jni\Android.mk" />
+    <None Include="jni\Application.mk" />
+    <None Include="libs\mobilecore_V1.1.jar" />
+    <None Include="res\drawable\icon.png">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Tegra-Android'">true</DeploymentContent>
+    </None>
+    <None Include="res\layout\main.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <JCompile Include="src\com\microslots\bakeinflash.java" />
+    <JCompile Include="src\com\microslots\global.java" />
+    <JCompile Include="src\com\microslots\myEditText.java" />
+    <JCompile Include="src\com\microslots\myWebView.java" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

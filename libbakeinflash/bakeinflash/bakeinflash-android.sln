@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bakeinflash", "bakeinflash\bakeinflash.vcxproj", "{E38600D3-0026-4375-A3D1-25B2AB283DFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Tegra-Android = Debug|Tegra-Android
+		Profile|Tegra-Android = Profile|Tegra-Android
+		Release|Tegra-Android = Release|Tegra-Android
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E38600D3-0026-4375-A3D1-25B2AB283DFB}.Debug|Tegra-Android.ActiveCfg = Debug|Tegra-Android
+		{E38600D3-0026-4375-A3D1-25B2AB283DFB}.Debug|Tegra-Android.Build.0 = Debug|Tegra-Android
+		{E38600D3-0026-4375-A3D1-25B2AB283DFB}.Profile|Tegra-Android.ActiveCfg = Profile|Tegra-Android
+		{E38600D3-0026-4375-A3D1-25B2AB283DFB}.Profile|Tegra-Android.Build.0 = Profile|Tegra-Android
+		{E38600D3-0026-4375-A3D1-25B2AB283DFB}.Release|Tegra-Android.ActiveCfg = Release|Tegra-Android
+		{E38600D3-0026-4375-A3D1-25B2AB283DFB}.Release|Tegra-Android.Build.0 = Release|Tegra-Android
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

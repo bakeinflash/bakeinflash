@@ -1,0 +1,764 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{be79cfb1-a14f-49aa-96f1-210e33bbe6ec}</ProjectGuid>
+    <RootNamespace>winphone</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <XapOutputs>true</XapOutputs>
+    <XapFilename>winphone_$(Configuration)_$(Platform).xap</XapFilename>
+    <WinMDAssembly>true</WinMDAssembly>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\Program Files (x86)\Visual Leak Detector\include;C:\bakeinflash\libbakeinflash\Classes;C:\bakeinflash\libbakeinflash\Classes\jpeglib;C:\bakeinflash\libbakeinflash\Classes\zlib;C:\bakeinflash\libbakeinflash\Classes\freetype2\include;C:\bakeinflash\libbakeinflash\Classes\openAL\OpenAL32\Include;C:\bakeinflash\libbakeinflash\Classes\openAL\include;C:\bakeinflash\libbakeinflash\Classes\openAL\Alc;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files (x86)\Visual Leak Detector\lib\Win32;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)$(Configuration)</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>PSAPI_VERSION=2;WINPHONE;_CRT_SECURE_NO_WARNINGS;WIN32;NO_GETENV;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;ZLIB_WINAPI;ASMV;ASMINF;FT_DEBUG_LEVEL_ERROR;FT_DEBUG_LEVEL_TRACE;FT2_BUILD_LIBRARY;TU_CONFIG_LINK_TO_THREAD=0;TU_CONFIG_LINK_TO_FFMPEG=0;TU_CONFIG_LINK_TO_SSL=0;TU_CONFIG_LINK_TO_SQLITE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAsWinRT>true</CompileAsWinRT>
+      <DisableSpecificWarnings>4800;4451</DisableSpecificWarnings>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>d3d11.lib;ws2_32.lib;C:\bakeinflash\libbakeinflash\Classes\zlib\masmx86\inffas32.obj;C:\bakeinflash\libbakeinflash\Classes\zlib\masmx86\match686.obj;XAudio2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>PSAPI_VERSION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAsWinRT>true</CompileAsWinRT>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <PreprocessorDefinitions>PSAPI_VERSION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAsWinRT>true</CompileAsWinRT>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <ClCompile>
+      <PreprocessorDefinitions>PSAPI_VERSION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAsWinRT>true</CompileAsWinRT>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="platform.winmd">
+      <IsWinMDFile>true</IsWinMDFile>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\ApplicationIcon.png" />
+    <Image Include="Assets\AlignmentGrid.png" />
+    <Image Include="Assets\Tiles\FlipCycleTileLarge.png" />
+    <Image Include="Assets\Tiles\FlipCycleTileMedium.png" />
+    <Image Include="Assets\Tiles\FlipCycleTileSmall.png" />
+    <Image Include="Assets\Tiles\IconicTileMediumLarge.png" />
+    <Image Include="Assets\Tiles\IconicTileSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_abc.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_action.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_array.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_bitmapdata.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_boolean.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_broadcaster.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_class.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_color.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_color_transform.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_date.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_event.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_event_dispatcher.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_flash.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_global.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_iOS.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_key.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_math.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_matrix.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_mcloader.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_microphone.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_mouse.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_netconnection.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_netstream.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_number.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_point.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_selection.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_sharedobject.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_sound.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_string.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_textformat.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_transform.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_urlvariables.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_xml.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_xmlsocket.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_sprite.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_avm2.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_button.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_canvas.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_character.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_disasm.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_dlist.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_environment.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_filters.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_font.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_fontlib.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_freetype.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_function.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_impl.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_json.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_listener.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_log.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_md5.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_morph2.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_movie_def.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_mutex.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_object.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_render.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_root.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_shape.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_sound.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_sound_handler_xaudio2.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_sprite.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_sprite_def.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_stream.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_string_object.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_styles.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_tcp.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_tesselate.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_text.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_text_.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_types.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_value.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_video_impl.h" />
+    <ClInclude Include="..\Classes\base\container.h" />
+    <ClInclude Include="..\Classes\base\ear_clip_triangulate.h" />
+    <ClInclude Include="..\Classes\base\ear_clip_triangulate_impl.h" />
+    <ClInclude Include="..\Classes\base\file_util.h" />
+    <ClInclude Include="..\Classes\base\grid_index.h" />
+    <ClInclude Include="..\Classes\base\image.h" />
+    <ClInclude Include="..\Classes\base\jpeg.h" />
+    <ClInclude Include="..\Classes\base\logger.h" />
+    <ClInclude Include="..\Classes\base\md5.h" />
+    <ClInclude Include="..\Classes\base\membuf.h" />
+    <ClInclude Include="..\Classes\base\png_helper.h" />
+    <ClInclude Include="..\Classes\base\smart_ptr.h" />
+    <ClInclude Include="..\Classes\base\triangulate.h" />
+    <ClInclude Include="..\Classes\base\triangulate_impl.h" />
+    <ClInclude Include="..\Classes\base\tu_config.h" />
+    <ClInclude Include="..\Classes\base\tu_file.h" />
+    <ClInclude Include="..\Classes\base\tu_loadlib.h" />
+    <ClInclude Include="..\Classes\base\tu_math.h" />
+    <ClInclude Include="..\Classes\base\tu_memdebug.h" />
+    <ClInclude Include="..\Classes\base\tu_queue.h" />
+    <ClInclude Include="..\Classes\base\tu_random.h" />
+    <ClInclude Include="..\Classes\base\tu_swap.h" />
+    <ClInclude Include="..\Classes\base\tu_timer.h" />
+    <ClInclude Include="..\Classes\base\tu_types.h" />
+    <ClInclude Include="..\Classes\base\utf8.h" />
+    <ClInclude Include="..\Classes\base\utility.h" />
+    <ClInclude Include="..\Classes\base\vert_types.h" />
+    <ClInclude Include="..\Classes\base\zlib_adapter.h" />
+    <ClInclude Include="..\Classes\freetype2\config\ftconfig.h" />
+    <ClInclude Include="..\Classes\freetype2\config\ftheader.h" />
+    <ClInclude Include="..\Classes\freetype2\config\ftmodule.h" />
+    <ClInclude Include="..\Classes\freetype2\config\ftoption.h" />
+    <ClInclude Include="..\Classes\freetype2\config\ftstdlib.h" />
+    <ClInclude Include="..\Classes\jpeglib\cderror.h" />
+    <ClInclude Include="..\Classes\jpeglib\cdjpeg.h" />
+    <ClInclude Include="..\Classes\jpeglib\jchuff.h" />
+    <ClInclude Include="..\Classes\jpeglib\jconfig.h" />
+    <ClInclude Include="..\Classes\jpeglib\jdct.h" />
+    <ClInclude Include="..\Classes\jpeglib\jdhuff.h" />
+    <ClInclude Include="..\Classes\jpeglib\jerror.h" />
+    <ClInclude Include="..\Classes\jpeglib\jinclude.h" />
+    <ClInclude Include="..\Classes\jpeglib\jmemsys.h" />
+    <ClInclude Include="..\Classes\jpeglib\jmorecfg.h" />
+    <ClInclude Include="..\Classes\jpeglib\jpegint.h" />
+    <ClInclude Include="..\Classes\jpeglib\jpeglib.h" />
+    <ClInclude Include="..\Classes\jpeglib\jversion.h" />
+    <ClInclude Include="..\Classes\jpeglib\transupp.h" />
+    <ClInclude Include="..\Classes\pugixml\pugiconfig.hpp" />
+    <ClInclude Include="..\Classes\pugixml\pugixml.hpp" />
+    <ClInclude Include="..\Classes\zlib\crc32.h" />
+    <ClInclude Include="..\Classes\zlib\deflate.h" />
+    <ClInclude Include="..\Classes\zlib\gzguts.h" />
+    <ClInclude Include="..\Classes\zlib\inffast.h" />
+    <ClInclude Include="..\Classes\zlib\inffixed.h" />
+    <ClInclude Include="..\Classes\zlib\inflate.h" />
+    <ClInclude Include="..\Classes\zlib\inftrees.h" />
+    <ClInclude Include="..\Classes\zlib\trees.h" />
+    <ClInclude Include="..\Classes\zlib\zconf.h" />
+    <ClInclude Include="..\Classes\zlib\zlib.h" />
+    <ClInclude Include="..\Classes\zlib\zutil.h" />
+    <ClInclude Include="renderer.h" />
+    <ClInclude Include="winphone.h" />
+    <ClInclude Include="DirectXHelper.h" />
+    <ClInclude Include="Direct3DBase.h" />
+    <ClInclude Include="BasicTimer.h" />
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_abc.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_action.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_array.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_bitmapdata.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_boolean.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_broadcaster.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_class.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_color.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_color_transform.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_date.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_event.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_event_dispatcher.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_flash.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_global.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_iOS.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_key.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_math.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_matrix.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_mcloader.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_microphone.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_mouse.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_netconnection.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_netstream.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_number.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_point.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_selection.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_sharedobject.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_sound.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_string.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_textformat.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_transform.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_urlvariables.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_xml.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_xmlsocket.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_sprite.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_avm2.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_avm2_jit.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_button.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_canvas.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_character.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_disasm.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_dlist.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_environment.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_filters.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_font.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_fontlib.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_freetype.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_function.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_impl.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_json.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_listener.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_log.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_md5.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_morph2.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_movie_def.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_mutex.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_object.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_player.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_render.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_render_handler_d3d11.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_root.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_shape.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_sound.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_sound_handler_xaudio2.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_sprite.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_sprite_def.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_stream.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_string_object.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_styles.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_tcp.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_tesselate.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_text.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_types.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_value.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_video_impl.cpp" />
+    <ClCompile Include="..\Classes\base\container.cpp" />
+    <ClCompile Include="..\Classes\base\ear_clip_triangulate_float.cpp" />
+    <ClCompile Include="..\Classes\base\ear_clip_triangulate_sint16.cpp" />
+    <ClCompile Include="..\Classes\base\file_util.cpp" />
+    <ClCompile Include="..\Classes\base\image.cpp" />
+    <ClCompile Include="..\Classes\base\image_filters.cpp" />
+    <ClCompile Include="..\Classes\base\jpeg.cpp" />
+    <ClCompile Include="..\Classes\base\logger.cpp" />
+    <ClCompile Include="..\Classes\base\md5.cpp" />
+    <ClCompile Include="..\Classes\base\membuf.cpp" />
+    <ClCompile Include="..\Classes\base\png_helper.cpp" />
+    <ClCompile Include="..\Classes\base\triangulate_float.cpp" />
+    <ClCompile Include="..\Classes\base\triangulate_sint32.cpp" />
+    <ClCompile Include="..\Classes\base\tu_file.cpp" />
+    <ClCompile Include="..\Classes\base\tu_loadlib.cpp" />
+    <ClCompile Include="..\Classes\base\tu_random.cpp" />
+    <ClCompile Include="..\Classes\base\tu_timer.cpp" />
+    <ClCompile Include="..\Classes\base\tu_types.cpp" />
+    <ClCompile Include="..\Classes\base\utf8.cpp" />
+    <ClCompile Include="..\Classes\base\utility.cpp" />
+    <ClCompile Include="..\Classes\base\zlib_adapter.cpp" />
+    <ClCompile Include="..\Classes\freetype2\autofit\autofit.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftbase.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftbitmap.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftfstype.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftgasp.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftglyph.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftgxval.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftinit.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftlcdfil.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftmm.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftotval.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftpatent.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftpfr.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftstroke.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftsynth.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftsystem.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\fttype1.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftwinfnt.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftxf86.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\bdf\bdf.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\cache\ftcache.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\cff\cff.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\cid\type1cid.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\ftdebug.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\gzip\ftgzip.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\lzw\ftlzw.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\pcf\pcf.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\pfr\pfr.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\psaux\psaux.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\pshinter\pshinter.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\psnames\psmodule.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\raster\raster.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\sfnt\sfnt.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\smooth\smooth.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\truetype\truetype.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\type1\type1.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\type42\type42.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\winfonts\winfnt.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\cdjpeg.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcapimin.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcapistd.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jccoefct.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jccolor.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcdctmgr.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jchuff.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcinit.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcmainct.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcmarker.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcmaster.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcomapi.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcparam.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcphuff.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcprepct.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcsample.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jctrans.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdapimin.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdapistd.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdatadst.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdatasrc.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdcoefct.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdcolor.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jddctmgr.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdhuff.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdinput.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdmainct.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdmarker.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdmaster.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdmerge.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdphuff.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdpostct.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdsample.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdtrans.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jerror.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jfdctflt.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jfdctfst.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jfdctint.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jidctflt.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jidctfst.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jidctint.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jidctred.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jmemansi.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jmemmgr.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jquant1.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jquant2.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jutils.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\rdbmp.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\rdcolmap.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\rdgif.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\rdppm.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\rdrle.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\rdswitch.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\rdtarga.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\transupp.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\wrbmp.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\wrgif.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\wrppm.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\wrrle.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\wrtarga.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\pugixml\pugixml.cpp" />
+    <ClCompile Include="..\Classes\zlib\adler32.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\compress.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\crc32.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\deflate.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\gzclose.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\gzlib.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\gzread.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\gzwrite.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\infback.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\inffast.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\inflate.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\inftrees.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\trees.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\uncompr.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\zutil.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="renderer.cpp" />
+    <ClCompile Include="winphone.cpp" />
+    <ClCompile Include="Direct3DBase.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="SimplePixelShader.hlsl">
+      <ShaderType>Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="SimplePixelShaderTex.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="SimpleVertexShader.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\bottle.swf">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+    </None>
+    <None Include="Assets\casino.swf">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+    </None>
+    <None Include="Assets\casino_selector_slot.swf">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+    </None>
+    <None Include="Assets\highway\reel.swf">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+    </None>
+    <None Include="Assets\test.swf">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+    </None>
+    <None Include="winphone_2016_04_05_09_37_12.sap" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Assets\default.ttf" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsPhone\v$(TargetPlatformVersion)\Microsoft.Cpp.WindowsPhone.$(TargetPlatformVersion).targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

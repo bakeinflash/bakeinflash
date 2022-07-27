@@ -1,0 +1,852 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="11.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Emscripten">
+      <Configuration>Debug</Configuration>
+      <Platform>Emscripten</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Emscripten">
+      <Configuration>Release</Configuration>
+      <Platform>Emscripten</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9C292ACA-3DF3-4DC4-8C37-29671DBE751A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>bakeinflash</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">
+    <PlatformToolset>emcc</PlatformToolset>
+    <EmscriptenDir>c:\emsdk\upstream\emscripten\</EmscriptenDir>
+    <ConfigurationType>HTMLPage</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">
+    <PlatformToolset>emcc</PlatformToolset>
+    <EmscriptenDir>c:\emsdk\upstream\emscripten\</EmscriptenDir>
+    <ConfigurationType>HTMLPage</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>../Classes/ffmpeg;C:\libgame\include\freetype;C:\libgame\include;C:\Program Files (x86)\Visual Leak Detector\include;../Classes;../Classes/cef;../Classes/glew/include/GL;../Classes/jpeglib;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\libgame\include\freetype;C:\libgame\include;C:\Program Files (x86)\Visual Leak Detector\include;C:\bakeinflash\libbakeinflash\Classes;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;TU_CONFIG_LINK_TO_THREAD=2;TU_CONFIG_LINK_TO_LIBPNG;TU_CONFIG_VERBOSE=1;TU_CONFIG_LINK_TO_SQLITE=0;TU_CONFIG_LINK_TO_LIB3DS=0;TU_CONFIG_LINK_CEF=0;TU_CONFIG_LINK_TO_LIBHPDF=0;_ENABLE_JIT=0;TU_CONFIG_LINK_TO_LIBUVC=0;TU_CONFIG_LINK_TO_FFMPEG=0;TU_CONFIG_LINK_TO_V4L2=0;TU_CONFIG_LINK_TO_MYSQL=0;TU_USE_SDL_SOUND;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>sdl2.lib;sdl2main.lib;opengl32.lib;WinMM.lib;ws2_32.lib;pthreadVC2.lib;freetype.lib;sqlite3.lib;libpng.lib;xaudio2.lib;ssleay32MD.lib;libcef.lib;avcodec.lib;avformat.lib;avutil.lib;swresample.lib;swscale.lib;libusb-1.0.lib;OpenAL32.lib;C:\bakeinflash\libbakeinflash\Classes\glew\lib\Release\Win32\glew32s.lib;C:\bakeinflash\libbakeinflash\Classes\glew\lib\Release\Win32\glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\libgame\lib;C:\libgame\lib\SDL2\x86;C:\bakeinflash\libbakeinflash\Classes\glew\lib\Release\Win32;C:\bakeinflash\libbakeinflash\Classes\ffmpeg\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>
+      </ImportLibrary>
+      <IgnoreSpecificDefaultLibraries>msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <OptimizeReferences>false</OptimizeReferences>
+      <AdditionalOptions>/NODEFAULTLIB:libcmt %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4996 </DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>sdl2.lib;sdl2main.lib;opengl32.lib;WinMM.lib;ws2_32.lib;pthreadVC2.lib;OpenAL32.lib;freetype.lib;sqlite3.lib;d3d11.lib;libpng.lib;avcodec.lib;avformat.lib;avutil.lib;swscale.lib;swresample.lib;xaudio2.lib;ssleay32MD.lib;libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\libgame\lib;C:\libgame\lib\SDL2\x86;C:\libgame\lib\ffmpeg;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">
+    <ClCompile>
+      <AdditionalOptions>-s USE_SDL=2 -s USE_SDL_MIXER=2 -s USE_FREETYPE=1 -s ALLOW_MEMORY_GROWTH=1 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>../Classes</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TU_CONFIG_LINK_TO_FREETYPE=1;TU_CONFIG_LINK_TO_SSL=0;TU_CONFIG_LINK_TO_FFMPEG=0;TU_CONFIG_LINK_TO_MYSQL=0;TU_CONFIG_LINK_TO_SQLITE=0;TU_USE_SDL_SOUND</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp11</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <AdditionalOptions>-s USE_SDL=2 -s USE_SDL_MIXER=2 -s USE_FREETYPE=1 -s ALLOW_MEMORY_GROWTH=1 --preload-file C:\bakeinflash\michael\bin@/ %(AdditionalOptions)</AdditionalOptions>
+      <PreloadFile>
+      </PreloadFile>
+      <GenerateDebugInformation>FullDebugInformation</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">
+    <ClCompile>
+      <AdditionalOptions>-s USE_SDL=2 -s USE_SDL_MIXER=2 -s USE_FREETYPE=1 -s ALLOW_MEMORY_GROWTH=1 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>../Classes</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TU_CONFIG_LINK_TO_FREETYPE=1;TU_CONFIG_LINK_TO_SSL=0;TU_CONFIG_LINK_TO_FFMPEG=0;TU_CONFIG_LINK_TO_MYSQL=0;TU_CONFIG_LINK_TO_SQLITE=0;TU_USE_SDL_SOUND</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp11</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <AdditionalOptions>-s USE_SDL=2 -s USE_SDL_MIXER=2 -s USE_FREETYPE=1 -s ALLOW_MEMORY_GROWTH=1 --preload-file C:\bakeinflash\michael\bin@/ %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_abc.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_action.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_array.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_bitmapdata.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_boolean.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_broadcaster.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_camera.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_camera_.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_class.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_color.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_color_transform.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_date.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_event.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_event_dispatcher.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_flash.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_global.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_imap.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_imap_.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_iOS.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_iwww.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_iwww_.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_key.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_math.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_matrix.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_mcloader.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_microphone.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_mouse.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_netconnection.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_netstream.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_number.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_point.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_print.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_selection.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_sharedobject.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_sound.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_string.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_textformat.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_transform.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_urlvariables.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_video_stream.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_xml.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_xmlsocket.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_sprite.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_avm2.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_button.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_canvas.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_character.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_cursor.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_disasm.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_dlist.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_environment.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_filters.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_font.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_fontlib.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_freetype.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_function.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_impl.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_jit.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_jit_opcode.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_json.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_listener.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_log.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_logo.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_md5.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_morph2.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_movie_def.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_mutex.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_muxer.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_object.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_render.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_render_handler_ogles2.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_root.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_shape.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_sound.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_sound_handler_sdl.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_sprite.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_sprite_def.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_stream.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_string_object.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_styles.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_tcp.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_tesselate.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_text.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_types.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_value.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_video_impl.h" />
+    <ClInclude Include="..\Classes\bakeinflash\platforms\bakeinflash_jit_x86.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\platforms\bakeinflash_jit_x86.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\plugins\cef\as_cef.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\plugins\file\bakeinflash_file_plugin.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\plugins\mysql\mydb.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\plugins\mysql\mytable.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\plugins\sqlite\sqlite_db.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\plugins\sqlite\sqlite_table.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\plugins\sql_db.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\plugins\sql_table.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\plugins\sysinfo\dirent.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\plugins\sysinfo\sysinfo.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\plugins\ts\ts.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\plugins\validator\as_validator.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\plugins\validator\validator.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\plugins\validator\validator_cashcode.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\plugins\validator\validator_pyramid.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\container.h" />
+    <ClInclude Include="..\Classes\base\ear_clip_triangulate.h" />
+    <ClInclude Include="..\Classes\base\ear_clip_triangulate_impl.h" />
+    <ClInclude Include="..\Classes\base\file_util.h" />
+    <ClInclude Include="..\Classes\base\grid_index.h" />
+    <ClInclude Include="..\Classes\base\image.h" />
+    <ClInclude Include="..\Classes\base\jpeg.h" />
+    <ClInclude Include="..\Classes\base\logger.h" />
+    <ClInclude Include="..\Classes\base\md5.h" />
+    <ClInclude Include="..\Classes\base\membuf.h" />
+    <ClInclude Include="..\Classes\base\png_helper.h" />
+    <ClInclude Include="..\Classes\base\smart_ptr.h" />
+    <ClInclude Include="..\Classes\base\triangulate.h" />
+    <ClInclude Include="..\Classes\base\triangulate_impl.h" />
+    <ClInclude Include="..\Classes\base\tu_config.h" />
+    <ClInclude Include="..\Classes\base\tu_file.h" />
+    <ClInclude Include="..\Classes\base\tu_loadlib.h" />
+    <ClInclude Include="..\Classes\base\tu_math.h" />
+    <ClInclude Include="..\Classes\base\tu_queue.h" />
+    <ClInclude Include="..\Classes\base\tu_random.h" />
+    <ClInclude Include="..\Classes\base\tu_serial.h" />
+    <ClInclude Include="..\Classes\base\tu_swap.h" />
+    <ClInclude Include="..\Classes\base\tu_timer.h" />
+    <ClInclude Include="..\Classes\base\tu_types.h" />
+    <ClInclude Include="..\Classes\base\utf8.h" />
+    <ClInclude Include="..\Classes\base\utility.h" />
+    <ClInclude Include="..\Classes\base\vert_types.h" />
+    <ClInclude Include="..\Classes\base\zlib_adapter.h" />
+    <ClInclude Include="..\Classes\jpeglib\jconfig.h" />
+    <ClInclude Include="..\Classes\jpeglib\jdct.h" />
+    <ClInclude Include="..\Classes\jpeglib\jerror.h" />
+    <ClInclude Include="..\Classes\jpeglib\jinclude.h" />
+    <ClInclude Include="..\Classes\jpeglib\jmemsys.h" />
+    <ClInclude Include="..\Classes\jpeglib\jmorecfg.h" />
+    <ClInclude Include="..\Classes\jpeglib\jpegint.h" />
+    <ClInclude Include="..\Classes\jpeglib\jpeglib.h" />
+    <ClInclude Include="..\Classes\jpeglib\jversion.h" />
+    <ClInclude Include="..\Classes\libuvc\libuvc.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\libuvc\libuvc_config.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\libuvc\libuvc_internal.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\libuvc\utlist.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\net\http_server.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\pugixml\pugiconfig.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Classes\zlib\crc32.h" />
+    <ClInclude Include="..\Classes\zlib\deflate.h" />
+    <ClInclude Include="..\Classes\zlib\gzguts.h" />
+    <ClInclude Include="..\Classes\zlib\inffast.h" />
+    <ClInclude Include="..\Classes\zlib\inffixed.h" />
+    <ClInclude Include="..\Classes\zlib\inflate.h" />
+    <ClInclude Include="..\Classes\zlib\inftrees.h" />
+    <ClInclude Include="..\Classes\zlib\trees.h" />
+    <ClInclude Include="..\Classes\zlib\zconf.h" />
+    <ClInclude Include="..\Classes\zlib\zlib.h" />
+    <ClInclude Include="..\Classes\zlib\zutil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_abc.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_action.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_array.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_bitmapdata.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_boolean.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_broadcaster.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_camera.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_class.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_color.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_color_transform.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_date.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_event.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_event_dispatcher.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_flash.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_global.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_imap.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_iOS.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_iwww.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_key.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_math.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_matrix.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_mcloader.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_microphone.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_mouse.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_netconnection.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_netstream.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_number.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_point.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_print.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_selection.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_sharedobject.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_sound.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_string.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_textformat.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_transform.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_urlvariables.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_xml.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_xmlsocket.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_sprite.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_avm2.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_avm2_jit.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_button.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_canvas.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_character.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_disasm.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_dlist.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_environment.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_filters.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_font.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_fontlib.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_freetype.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_function.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_impl.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_jit.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_jit_opcode.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_json.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_listener.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_log.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_logo.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_md5.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_morph2.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_movie_def.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_mutex.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_muxer.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_object.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_player.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_render.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_render_handler_ogles2.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_root.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_shape.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_sound.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_sound_handler_sdl.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_sprite.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_sprite_def.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_stream.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_string_object.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_styles.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_tcp.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_tesselate.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_text.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_tools.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_types.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_value.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_video_impl.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\plugins\cef\as_cef.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\plugins\file\bakeinflash_file_plugin.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\plugins\mysql\mydb.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\plugins\mysql\mytable.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\plugins\sqlite\sqlite_db.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\plugins\sqlite\sqlite_table.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\plugins\sysinfo\sysinfo.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\plugins\ts\ts.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\plugins\validator\as_validator.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\plugins\validator\validator.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\plugins\validator\validator_cashcode.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\plugins\validator\validator_pyramid.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash_es2.cpp" />
+    <ClCompile Include="..\Classes\base\container.cpp" />
+    <ClCompile Include="..\Classes\base\ear_clip_triangulate_float.cpp" />
+    <ClCompile Include="..\Classes\base\ear_clip_triangulate_sint16.cpp" />
+    <ClCompile Include="..\Classes\base\file_util.cpp" />
+    <ClCompile Include="..\Classes\base\image.cpp" />
+    <ClCompile Include="..\Classes\base\image_filters.cpp" />
+    <ClCompile Include="..\Classes\base\jpeg.cpp" />
+    <ClCompile Include="..\Classes\base\logger.cpp" />
+    <ClCompile Include="..\Classes\base\md5.cpp" />
+    <ClCompile Include="..\Classes\base\membuf.cpp" />
+    <ClCompile Include="..\Classes\base\png_helper.cpp" />
+    <ClCompile Include="..\Classes\base\triangulate_float.cpp" />
+    <ClCompile Include="..\Classes\base\triangulate_sint32.cpp" />
+    <ClCompile Include="..\Classes\base\tu_file.cpp" />
+    <ClCompile Include="..\Classes\base\tu_loadlib.cpp" />
+    <ClCompile Include="..\Classes\base\tu_random.cpp" />
+    <ClCompile Include="..\Classes\base\tu_serial.cpp" />
+    <ClCompile Include="..\Classes\base\tu_timer.cpp" />
+    <ClCompile Include="..\Classes\base\tu_types.cpp" />
+    <ClCompile Include="..\Classes\base\utf8.cpp" />
+    <ClCompile Include="..\Classes\base\utility.cpp" />
+    <ClCompile Include="..\Classes\base\zlib_adapter.cpp" />
+    <ClCompile Include="..\Classes\jpeglib\jaricom.c" />
+    <ClCompile Include="..\Classes\jpeglib\jcapimin.c" />
+    <ClCompile Include="..\Classes\jpeglib\jcapistd.c" />
+    <ClCompile Include="..\Classes\jpeglib\jcarith.c" />
+    <ClCompile Include="..\Classes\jpeglib\jccoefct.c" />
+    <ClCompile Include="..\Classes\jpeglib\jccolor.c" />
+    <ClCompile Include="..\Classes\jpeglib\jcdctmgr.c" />
+    <ClCompile Include="..\Classes\jpeglib\jchuff.c" />
+    <ClCompile Include="..\Classes\jpeglib\jcinit.c" />
+    <ClCompile Include="..\Classes\jpeglib\jcmainct.c" />
+    <ClCompile Include="..\Classes\jpeglib\jcmarker.c" />
+    <ClCompile Include="..\Classes\jpeglib\jcmaster.c" />
+    <ClCompile Include="..\Classes\jpeglib\jcomapi.c" />
+    <ClCompile Include="..\Classes\jpeglib\jcparam.c" />
+    <ClCompile Include="..\Classes\jpeglib\jcprepct.c" />
+    <ClCompile Include="..\Classes\jpeglib\jcsample.c" />
+    <ClCompile Include="..\Classes\jpeglib\jctrans.c" />
+    <ClCompile Include="..\Classes\jpeglib\jdapimin.c" />
+    <ClCompile Include="..\Classes\jpeglib\jdapistd.c" />
+    <ClCompile Include="..\Classes\jpeglib\jdarith.c" />
+    <ClCompile Include="..\Classes\jpeglib\jdatadst.c" />
+    <ClCompile Include="..\Classes\jpeglib\jdatasrc.c" />
+    <ClCompile Include="..\Classes\jpeglib\jdcoefct.c" />
+    <ClCompile Include="..\Classes\jpeglib\jdcolor.c" />
+    <ClCompile Include="..\Classes\jpeglib\jddctmgr.c" />
+    <ClCompile Include="..\Classes\jpeglib\jdhuff.c" />
+    <ClCompile Include="..\Classes\jpeglib\jdinput.c" />
+    <ClCompile Include="..\Classes\jpeglib\jdmainct.c" />
+    <ClCompile Include="..\Classes\jpeglib\jdmarker.c" />
+    <ClCompile Include="..\Classes\jpeglib\jdmaster.c" />
+    <ClCompile Include="..\Classes\jpeglib\jdmerge.c" />
+    <ClCompile Include="..\Classes\jpeglib\jdpostct.c" />
+    <ClCompile Include="..\Classes\jpeglib\jdsample.c" />
+    <ClCompile Include="..\Classes\jpeglib\jdtrans.c" />
+    <ClCompile Include="..\Classes\jpeglib\jerror.c" />
+    <ClCompile Include="..\Classes\jpeglib\jfdctflt.c" />
+    <ClCompile Include="..\Classes\jpeglib\jfdctfst.c" />
+    <ClCompile Include="..\Classes\jpeglib\jfdctint.c" />
+    <ClCompile Include="..\Classes\jpeglib\jidctflt.c" />
+    <ClCompile Include="..\Classes\jpeglib\jidctfst.c" />
+    <ClCompile Include="..\Classes\jpeglib\jidctint.c" />
+    <ClCompile Include="..\Classes\jpeglib\jmemansi.c" />
+    <ClCompile Include="..\Classes\jpeglib\jmemmgr.c" />
+    <ClCompile Include="..\Classes\jpeglib\jquant1.c" />
+    <ClCompile Include="..\Classes\jpeglib\jquant2.c" />
+    <ClCompile Include="..\Classes\jpeglib\jutils.c" />
+    <ClCompile Include="..\Classes\libharu\hpdf_annotation.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_array.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_binary.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_boolean.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_catalog.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_destination.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_dict.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_doc.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_doc_png.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_encoder.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_encoder_cns.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_encoder_cnt.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_encoder_jp.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_encoder_kr.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_encrypt.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_encryptdict.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_error.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_ext_gstate.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_font.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_fontdef.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_fontdef_base14.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_fontdef_cid.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_fontdef_cns.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_fontdef_cnt.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_fontdef_jp.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_fontdef_kr.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_fontdef_tt.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_fontdef_type1.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_font_cid.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_font_tt.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_font_type1.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_gstate.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_image.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_image_png.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_info.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_list.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_mmgr.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_name.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_null.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_number.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_objects.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_outline.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_pages.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_page_label.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_page_operator.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_real.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_streams.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_string.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_utils.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libharu\hpdf_xref.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libuvc\ctrl-gen.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libuvc\ctrl.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libuvc\device.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libuvc\diag.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libuvc\frame-mjpeg.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libuvc\frame.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libuvc\init.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libuvc\misc.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\libuvc\stream.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\net\http_server.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\pugixml\pugixml.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Emscripten'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Emscripten'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\adler32.c" />
+    <ClCompile Include="..\Classes\zlib\compress.c" />
+    <ClCompile Include="..\Classes\zlib\crc32.c" />
+    <ClCompile Include="..\Classes\zlib\deflate.c" />
+    <ClCompile Include="..\Classes\zlib\gzclose.c" />
+    <ClCompile Include="..\Classes\zlib\gzlib.c" />
+    <ClCompile Include="..\Classes\zlib\gzread.c" />
+    <ClCompile Include="..\Classes\zlib\gzwrite.c" />
+    <ClCompile Include="..\Classes\zlib\infback.c" />
+    <ClCompile Include="..\Classes\zlib\inffast.c" />
+    <ClCompile Include="..\Classes\zlib\inflate.c" />
+    <ClCompile Include="..\Classes\zlib\inftrees.c" />
+    <ClCompile Include="..\Classes\zlib\trees.c" />
+    <ClCompile Include="..\Classes\zlib\uncompr.c" />
+    <ClCompile Include="..\Classes\zlib\zutil.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\bakeinflash\bakeinflash\bakeinflash.vcxproj.filters" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

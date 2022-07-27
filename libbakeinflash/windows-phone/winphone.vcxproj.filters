@@ -1,0 +1,1138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>17b52f90-9b33-4188-8a0e-808582bbabbc</UniqueIdentifier>
+      <Extensions>
+      </Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="bakeinflash">
+      <UniqueIdentifier>{d76aae6d-7e80-44c1-ac29-86f2076859d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base">
+      <UniqueIdentifier>{5329cb8e-1362-4a54-964a-cad0c6b1e4f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bakeinflash\bakeinflash_classes">
+      <UniqueIdentifier>{c5555409-65f4-456b-ace1-2988b51d30c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jpeglib">
+      <UniqueIdentifier>{ebc3dc07-31d3-47f7-a3b0-7b337833024d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pugi">
+      <UniqueIdentifier>{53f29b2a-5d24-486c-b84c-d29a029af779}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zlib">
+      <UniqueIdentifier>{8eda5c66-6e90-4a88-bd26-5b2c75d138a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libfreetype">
+      <UniqueIdentifier>{daccde6f-37f9-481b-b1c3-c0e6bd536b60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libfreetype\ft-modules">
+      <UniqueIdentifier>{3aa6080d-d5b1-4f20-85ed-c4e322a9072c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="puggi">
+      <UniqueIdentifier>{7a636568-98f9-4c2f-9c00-74b53763b639}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\ApplicationIcon.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\AlignmentGrid.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Tiles\FlipCycleTileLarge.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Tiles\FlipCycleTileMedium.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Tiles\FlipCycleTileSmall.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Tiles\IconicTileMediumLarge.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Tiles\IconicTileSmall.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="SimplePixelShader.hlsl" />
+    <FxCompile Include="SimpleVertexShader.hlsl" />
+    <FxCompile Include="SimplePixelShaderTex.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="winphone.cpp" />
+    <ClCompile Include="Direct3DBase.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="renderer.cpp" />
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_array.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_bitmapdata.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_boolean.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_broadcaster.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_class.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_color.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_color_transform.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_date.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_event.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_event_dispatcher.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_flash.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_global.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_iOS.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_key.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_math.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_matrix.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_mcloader.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_microphone.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_mouse.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_netconnection.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_netstream.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_number.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_point.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_selection.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_sharedobject.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_sound.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_string.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_textformat.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_transform.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_urlvariables.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_xml.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_xmlsocket.cpp">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_abc.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_action.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_as_sprite.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_avm2.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_avm2_jit.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_button.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_canvas.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_character.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_disasm.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_dlist.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_environment.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_filters.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_font.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_fontlib.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_freetype.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_function.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_impl.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_json.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_listener.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_log.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_md5.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_morph2.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_movie_def.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_mutex.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_object.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_player.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_render.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_render_handler_d3d11.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_root.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_shape.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_sound.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_sound_handler_xaudio2.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_sprite.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_sprite_def.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_stream.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_string_object.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_styles.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_tcp.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_tesselate.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_text.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_types.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_value.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bakeinflash\bakeinflash_video_impl.cpp">
+      <Filter>bakeinflash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcapimin.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcapistd.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jccoefct.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jccolor.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcdctmgr.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jchuff.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcinit.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcmainct.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcmarker.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcmaster.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcomapi.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcparam.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcphuff.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcprepct.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jcsample.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jctrans.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdapimin.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdapistd.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdatadst.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdatasrc.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdcoefct.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdcolor.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jddctmgr.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdhuff.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdinput.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdmainct.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdmarker.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdmaster.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdmerge.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdphuff.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdpostct.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdsample.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jdtrans.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jerror.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jfdctflt.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jfdctfst.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jfdctint.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jidctflt.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jidctfst.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jidctint.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jidctred.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jmemansi.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jmemmgr.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\base\jpeg.cpp">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jquant1.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jquant2.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\jutils.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftbase.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftbitmap.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\cache\ftcache.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\ftdebug.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftfstype.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftgasp.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftglyph.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftgxval.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\gzip\ftgzip.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftinit.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftlcdfil.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\lzw\ftlzw.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftmm.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftotval.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftpatent.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftpfr.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftstroke.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftsynth.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftsystem.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\fttype1.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftwinfnt.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\base\ftxf86.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\autofit\autofit.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\bdf\bdf.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\adler32.c">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\cdjpeg.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\cff\cff.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\compress.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\base\container.cpp">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\crc32.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\deflate.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\base\ear_clip_triangulate_float.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\base\ear_clip_triangulate_sint16.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\base\file_util.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\gzclose.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\gzlib.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\gzread.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\gzwrite.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\base\image.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\base\image_filters.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\infback.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\inffast.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\inflate.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\inftrees.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\base\logger.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\base\md5.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\base\membuf.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\base\tu_file.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\base\tu_loadlib.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\base\tu_random.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\base\tu_timer.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\base\tu_types.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\base\utf8.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\base\utility.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\base\zlib_adapter.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\base\png_helper.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\zutil.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\base\triangulate_float.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\base\triangulate_sint32.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\rdbmp.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\rdcolmap.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\rdgif.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\rdppm.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\rdrle.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\rdswitch.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\rdtarga.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\psnames\psmodule.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\pshinter\pshinter.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\psaux\psaux.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\raster\raster.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\sfnt\sfnt.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\smooth\smooth.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\trees.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\transupp.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\pfr\pfr.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\type42\type42.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\cid\type1cid.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\type1\type1.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\truetype\truetype.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\zlib\uncompr.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\wrbmp.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\wrgif.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\wrppm.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\wrrle.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\jpeglib\wrtarga.c">
+      <Filter>jpeglib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\winfonts\winfnt.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\pugixml\pugixml.cpp">
+      <Filter>puggi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\freetype2\pcf\pcf.c">
+      <Filter>libfreetype</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="winphone.h" />
+    <ClInclude Include="DirectXHelper.h" />
+    <ClInclude Include="Direct3DBase.h" />
+    <ClInclude Include="BasicTimer.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="renderer.h" />
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_array.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_bitmapdata.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_boolean.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_broadcaster.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_class.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_color.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_color_transform.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_date.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_event.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_event_dispatcher.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_flash.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_global.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_iOS.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_key.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_math.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_matrix.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_mcloader.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_microphone.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_mouse.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_netconnection.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_netstream.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_number.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_point.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_selection.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_sharedobject.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_sound.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_string.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_textformat.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_transform.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_urlvariables.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_xml.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_classes\as_xmlsocket.h">
+      <Filter>bakeinflash\bakeinflash_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_abc.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_action.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_as_sprite.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_avm2.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_button.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_canvas.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_character.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_disasm.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_dlist.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_environment.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_filters.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_font.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_fontlib.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_freetype.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_function.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_impl.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_json.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_listener.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_log.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_md5.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_morph2.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_movie_def.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_mutex.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_object.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_render.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_root.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_shape.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_sound.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_sound_handler_xaudio2.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_sprite.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_sprite_def.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_stream.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_string_object.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_styles.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_tcp.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_tesselate.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_text.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_text_.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_types.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_value.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bakeinflash\bakeinflash_video_impl.h">
+      <Filter>bakeinflash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jpeglib\jchuff.h">
+      <Filter>jpeglib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jpeglib\jconfig.h">
+      <Filter>jpeglib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jpeglib\jdct.h">
+      <Filter>jpeglib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jpeglib\jdhuff.h">
+      <Filter>jpeglib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jpeglib\jerror.h">
+      <Filter>jpeglib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jpeglib\jinclude.h">
+      <Filter>jpeglib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jpeglib\jmemsys.h">
+      <Filter>jpeglib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jpeglib\jmorecfg.h">
+      <Filter>jpeglib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\jpeg.h">
+      <Filter>jpeglib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jpeglib\jpegint.h">
+      <Filter>jpeglib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jpeglib\jpeglib.h">
+      <Filter>jpeglib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jpeglib\jversion.h">
+      <Filter>jpeglib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\freetype2\config\ftconfig.h">
+      <Filter>libfreetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\freetype2\config\ftheader.h">
+      <Filter>libfreetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\freetype2\config\ftmodule.h">
+      <Filter>libfreetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\freetype2\config\ftoption.h">
+      <Filter>libfreetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\freetype2\config\ftstdlib.h">
+      <Filter>libfreetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jpeglib\cderror.h">
+      <Filter>jpeglib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\zlib\deflate.h">
+      <Filter>jpeglib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jpeglib\cdjpeg.h">
+      <Filter>jpeglib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\container.h">
+      <Filter>jpeglib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\zlib\crc32.h">
+      <Filter>jpeglib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\ear_clip_triangulate.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\ear_clip_triangulate_impl.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\file_util.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\grid_index.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\zlib\gzguts.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\image.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\zlib\inffast.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\zlib\inffixed.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\zlib\inflate.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\zlib\inftrees.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\logger.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\md5.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\membuf.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\tu_config.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\tu_file.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\tu_loadlib.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\tu_math.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\tu_memdebug.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\tu_queue.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\tu_random.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\tu_swap.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\tu_timer.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\tu_types.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\utf8.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\utility.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\vert_types.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\zlib_adapter.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\zlib\zlib.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\png_helper.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\zlib\zconf.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\zlib\zutil.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\triangulate.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\triangulate_impl.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\zlib\trees.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\jpeglib\transupp.h">
+      <Filter>jpeglib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\base\smart_ptr.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\pugixml\pugiconfig.hpp">
+      <Filter>puggi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\pugixml\pugixml.hpp">
+      <Filter>puggi</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="WMAppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\bottle.swf">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\casino.swf">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\casino_selector_slot.swf">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\highway\reel.swf">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="winphone_2016_04_05_09_37_12.sap" />
+    <None Include="Assets\test.swf">
+      <Filter>Assets</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Assets\default.ttf">
+      <Filter>Assets</Filter>
+    </Font>
+  </ItemGroup>
+</Project>
